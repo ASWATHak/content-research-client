@@ -85,7 +85,17 @@ export default function Home() {
             </div>
           </div>
         ) : (
-          <MarkdownViewer job={selectedJob} />
+          <div className="flex flex-col h-full">
+            <div className="p-4 border-b border-white/20">
+              <button
+                onClick={() => setSelectedJobId(undefined)}
+                className="px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-colors"
+              >
+                New Chat
+              </button>
+            </div>
+            <MarkdownViewer job={selectedJob} />
+          </div>
         )}
       </div>
     </div>
