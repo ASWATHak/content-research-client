@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { SuggestResponse, GenerateResponse, Job, ContentResponse } from './types';
 
-const API_BASE = 'http://localhost:4000';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL;
 
 export const api = {
   suggestSubtopics: async (mainTopic: string): Promise<SuggestResponse> => {
