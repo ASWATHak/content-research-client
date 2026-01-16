@@ -16,8 +16,8 @@ export default function Home() {
 
   useEffect(() => {
     loadJobs();
-    const interval = setInterval(loadJobs, 30000);
-    return () => clearInterval(interval);
+    // const interval = setInterval(loadJobs, 30000);
+    // return () => clearInterval(interval);
   }, []);
 
   const loadJobs = async () => {
